@@ -1,0 +1,27 @@
+{
+    "name": "my-project-app",
+    "private": true,
+    "license": "UNLICENSED",
+    "scripts": {
+      "shopify": "shopify",
+      "build": "shopify app build",
+      "dev": "shopify app dev",
+      "info": "shopify app info",
+      "generate": "shopify app generate",
+      "deploy": "shopify app deploy"
+    },
+    "devDependencies": {
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.8.0",
+        "vite": "^4.0.0"
+    },
+    "dependencies": {
+        "@shopify/app": "^3.53.0",
+        "@shopify/cli": "^3.53.0",
+        "apexcharts": "^3.45.0",
+        "highcharts": "^11.2.0"
+    },
+    "workspaces": [
+        "extensions/*"
+      ]
+}

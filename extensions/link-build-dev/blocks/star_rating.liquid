@@ -1,0 +1,51 @@
+
+
+<html>
+  <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+    <body>
+       
+      <div style="text-align:left; margin-left:25px;"> {{ block.settings.text }} </div>
+      <div style="text-align:left; margin-left:45px;"> {{ block.settings.textkey }} </div>
+      <div><img src="{{ block.settings.image | image_url: width: 150, height: 150 }}"></div>
+    </body>
+</html>
+
+
+
+{% schema %}
+{
+  
+  "name": "Product_Collection",
+  "target": "section",
+  "javascript": "links.js",
+  "settings": [
+
+    { "type": "text", 
+      "id": "text", 
+      "label": "Title" 
+    },
+
+    { "type": "text",
+      "id": "textkey", 
+      "label": "Keyword" 
+     },
+
+    { "type": "image_picker", 
+      "id": "image", 
+      "label": "Select Image"
+     }
+  ],
+  
+  	"enabled_on": {
+      "templates": ["page"]
+    }
+   
+}
+{% endschema %}
+
+
+
+
+

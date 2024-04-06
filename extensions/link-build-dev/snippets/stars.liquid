@@ -1,0 +1,24 @@
+{% comment %}
+{{ 'ratings.stars.label' | t }}:
+
+{%- for i in (1..rating) -%}
+  ★
+{%- endfor -%}
+{%- assign blank_stars = 5 | minus: rating -%}
+{%- for i in (1..blank_stars) -%}
+  ☆
+{%- endfor -%}
+{% endcomment %}
+
+<html>
+  <head>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+    <body>
+       
+      <div style="text-align:left; margin-left:25px;"> {{ block.settings.text }} </div>
+      <div style="text-align:left; margin-left:45px;"> {{ block.settings.textkey }} </div>
+      <div><img src="{{ block.settings.image | image_url: width: 150, height: 150 }}"></div>
+    </body>
+</html>
+
